@@ -1,0 +1,86 @@
+===========CSS=================
+    <style>
+        /* Add your CSS styles here */
+        body, html {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        }
+
+        .slider {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        }
+
+        .slider ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        animation: slide 5s infinite;
+        }
+
+        .slider li {
+        flex: 0 0 100vw;
+        }
+
+        .slider img {
+        margin-top: 10px;
+        width: 100%;
+        height: 90%;
+        object-fit: cover;
+        }
+
+        @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+        }
+
+    </style>
+
+
+
+
+===================HTML=================
+<div class="slider">
+        <!-- Images will be dynamically added here -->
+    </div>
+
+
+
+
+
+=========================JS====================
+
+const imageUrls = [
+   "https://cdn.pixabay.com/photo/2013/10/02/23/03/mountains-190055_1280.jpg",
+   "https://assets-us-01.kc-usercontent.com/0542d611-b6d8-4320-a4f4-35ac5cbf43a6/8b47c2b0-ca0c-4017-acc8-f56b19034c36/plant-nursery-insurance-facebook.jpg",
+   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVonv44-31MpEODMKvxpz1lBi4O6yDO7OczA&usqp=CAU",
+   // Add more image URLs here
+ ];
+ 
+ const slider = document.querySelector(".slider");
+ const sliderList = document.createElement("ul");
+ 
+ slider.appendChild(sliderList);
+ 
+ function createImageElement(url) {
+   const li = document.createElement("li");
+   const img = document.createElement("img");
+   img.src = url;
+   img.alt = "Plant Image";
+   li.appendChild(img);
+   return li;
+ }
+ 
+ for (const imageUrl of imageUrls) {
+   const imgElement = createImageElement(imageUrl);
+   sliderList.appendChild(imgElement);
+ }	

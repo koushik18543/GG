@@ -1,0 +1,3 @@
+pot5.jpeg == Diamond ceramic pot price==399 dic=5%
+
+seed7.jpeg == Parsely seed price==119 dic=4%
