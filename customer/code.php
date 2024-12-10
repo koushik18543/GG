@@ -1,6 +1,6 @@
 <?php
 session_start(); 
-$conn = mysqli_connect("3.109.212.28","root","root","php_user");
+$conn = mysqli_connect("db","root","root","php_user");
 if(isset($_POST['register']))
 {
     $fisrtname=$_POST['first_name'];
