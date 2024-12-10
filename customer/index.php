@@ -204,7 +204,7 @@ include('includes/sidebar.php');
 
                     <?php
 
-                    $con = mysqli_connect('localhost','root');
+                    $con = mysqli_connect('3.109.212.28','root','root');
                     mysqli_select_db($con,'php_user');
 
                     // if($con){
@@ -279,7 +279,7 @@ include('includes/sidebar.php');
 
                     <?php
 
-                    $con = mysqli_connect('localhost','root');
+                    $con = mysqli_connect('3.109.212.28','root','root');
                     mysqli_select_db($con,'php_user');
 
                     // if($con){
