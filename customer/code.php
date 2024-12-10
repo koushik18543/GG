@@ -41,7 +41,6 @@ if(isset($_POST['login_btn']))
     $result = mysqli_query($conn,$query);
     if(mysqli_num_rows($result)==1)
     {
-        // echo "correct";
         session_start();
         $_SESSION['email']=$_POST['email'];
         // $name = "SELECT name FROM customer WHERE `email`='{$_POST['email']}'";
