@@ -1,5 +1,8 @@
 <?php 
 $conn = mysqli_connect("db","root","root","php_user");
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 if(isset($_POST['register']))
 {
     $fisrtname=$_POST['first_name'];
@@ -41,7 +44,6 @@ if(isset($_POST['login_btn']))
     $result = mysqli_query($conn,$query);
     if(mysqli_num_rows($result)==1)
     {
-        session_start();
         $_SESSION['email']=$_POST['email'];
         // $name = "SELECT name FROM customer WHERE `email`='{$_POST['email']}'";
         // $run = mysqli_query($conn,$name);
