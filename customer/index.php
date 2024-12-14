@@ -1,9 +1,5 @@
 <?php
-// session_start();
-// if(!isset($_SESSION['Email']));
-// {
-//     header("Location:PROJECT/login.php");
-// }
+session_start();
 include('includes/header.php');
 include('includes/topbar.php');
 include('includes/sidebar.php');
@@ -55,7 +51,7 @@ include('includes/sidebar.php');
 
                     <?php
 
-                    $con = mysqli_connect('3.109.212.28','root','root');
+                    $con = mysqli_connect('db','root','root');
                     mysqli_select_db($con,'php_user');
 
                     // if($con){
@@ -130,7 +126,7 @@ include('includes/sidebar.php');
 
                     <?php
 
-                    $con = mysqli_connect('3.109.212.28','root','root');
+                    $con = mysqli_connect('db','root','root');
                     mysqli_select_db($con,'php_user');
 
                     // if($con){
@@ -204,7 +200,7 @@ include('includes/sidebar.php');
 
                     <?php
 
-                    $con = mysqli_connect('3.109.212.28','root','root');
+                    $con = mysqli_connect('db','root','root');
                     mysqli_select_db($con,'php_user');
 
                     // if($con){
@@ -279,7 +275,7 @@ include('includes/sidebar.php');
 
                     <?php
 
-                    $con = mysqli_connect('3.109.212.28','root','root');
+                    $con = mysqli_connect('db','root','root');
                     mysqli_select_db($con,'php_user');
 
                     // if($con){

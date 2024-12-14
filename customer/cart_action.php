@@ -1,11 +1,12 @@
 <?php
+ob_start();
 session_start();
 include('config/dbcon.php'); 
 if(isset($_POST['cart-btn']))
 {
     if(!is_numeric($tot_price))
     {
-        header("Location:index.php");
+        header("Location: index.php");
         $_SESSION['cart']="Quantity should not be null";
     }
     $user_id = $_GET["cust_id"];
@@ -30,7 +31,7 @@ if(isset($_POST['cart-btn']))
     // Update the quantity in the cart.
     $updateQuery = "UPDATE cart SET qty = qty + $qty, total_price = total_price + $tot_price WHERE cust_id = $user_id AND prod_id = $prod_id";
     mysqli_query($con, $updateQuery);
-    header("Location:index.php");
+    header("Location: index.php");
     $_SESSION['cart']="Product Quantity Updated successfully😉";
     }
     else
@@ -38,7 +39,7 @@ if(isset($_POST['cart-btn']))
     // Insert the product into the cart.
     $insertQuery = "INSERT INTO cart (cust_id,prod_id,prod_name,prod_img,qty,price,total_price) VALUES ('$user_id','$prod_id','$prod_name','$prod_img','$qty','$price','$tot_price')";
     mysqli_query($con, $insertQuery);
-    header("Location:index.php");
+    header("Location: index.php");
     $_SESSION['cart']="Product Added to the Cart successfully😉";
     }
 }

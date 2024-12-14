@@ -20,11 +20,9 @@ if(isset($_POST['register']))
             header("Location: login.php");
         }
         else
-	{
-	    echo "Error: " . mysqli_error($con);
-	    exit();
-	     //$_SESSION['status'] = "Failed to Registered!😖";
-            //header("Location: login.php");
+        {
+            $_SESSION['status'] = "Failed to Registered!😖";
+            header("Location: login.php");
         }
 
     }

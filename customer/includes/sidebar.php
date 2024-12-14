@@ -310,9 +310,9 @@
           </li> -->
           <br>
           <?php
-              $host='localhost';
+              $host='db';
               $username='root';
-              $password='';
+              $password='root';
               $database='php_user';
               //connection
               $con = mysqli_connect("$host","$username","$password","$database");
